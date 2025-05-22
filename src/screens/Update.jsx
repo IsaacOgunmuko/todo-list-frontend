@@ -16,7 +16,7 @@ export default function Update() {
 
   const data = async () => {
     try {
-      let response = await fetch('http://localhost:8000/findTask', {
+      let response = await fetch('https://todo-list-backend-qh1y.onrender.com/findTask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ export default function Update() {
     const handleSubmit =async (e) => {
       e.preventDefault();
       console.log(formValues)
-      let response=await fetch('http://localhost:8000/updateTask',{
+      let response=await fetch('https://todo-list-backend-qh1y.onrender.com/updateTask',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -107,7 +107,7 @@ export default function Update() {
     const handleDelete=async ()=>{
       console.log(id);
 
-    let response=await fetch('http://localhost:8000/deleteTask',{
+    let response=await fetch('https://todo-list-backend-qh1y.onrender.com/deleteTask',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
